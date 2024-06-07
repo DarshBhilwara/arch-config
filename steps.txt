@@ -1,0 +1,66 @@
+1 pre installation
+create a bootable usb with arch installation image and boot in the live environment
+https://wiki.archlinux.org/title/installation_guide
+
+2 network 
+ 
+rfkill list 
+rfkill unblock {device name} 
+iwctl device list 
+iwctl device {device name} set-property Powered on 
+iwctl station {device name} scan 
+iwctl station {device name} connect {wifi name} 
+ 
+3 arch install
+type arch install
+partition - 2GB fat32 /boot
+	    180GB ext4 /
+	    rest ext4 /home 
+systemd-boot
+profile minimal
+make without swap
+use pipewire
+use both linux and linux lts 
+use network manager 
+optional packages git base-devel
+optional repository multilib 
+reboot 
+ 
+4 - yay 
+git clone https://aur.archlinux.org/yay.git 
+cd yay 
+makepkg -si 
+cd .. 
+rm -rf yay
+
+5 - pacman packages
+linux-lts-headers kitty linux-header nautilus nvidia-dkms nvidia-utils lib32-nvidia-utils waybar firefox libva-nidia-driver sddm base-devel git vim neovim ttf-cascadia-code-nerd qt5ct qt6ct qt5-wayland pipewire wireplumber qt6-wayland polkit-kde-agent vifm figlet fastfetch htop btop gvfs-mtp brithgnessctl bluez blueman gtk3 gtk4 dunst qt6-svg qt6-declarative rofi-wayland bash-completion telegram-desktop virtualbox virtualbox-host-modules-arch gimp kdenlive imv zathura qbittorrent tp_smapi tlp nm-connection-editor qt5 qt6 vlc mpv
+
+6 - yay packages
+hyprland-git brave-bin visual-studio-code-bin hyprpicker hyprshot hyprpaper wlogout xdg-desktop-portal-hyprland-git webcord slimbookbattery
+
+7 - get config
+git clone https://github.com/DarshBhilwara/arch-config
+
+
+8 - services
+sudo systemctl enable sddm.service 
+sudo systemctl enable bluetooth.service
+sudo systemctl enable nvidia-suspend.service
+sudo systemctl enable nvidia-resume.service
+sudo systemctl enable tlp.service
+sudo systemctl enable nvidia-hibernate.service
+
+9 - misc 
+at end of  /boot/loader/entries/*linux-lts.conf and /boot/loader/entries/*linux.confd add
+	 nvidia_drm.modeset=1
+	 nvidia.NVreg_PreserveVideoMemoryAllocations=1
+brave://flags and turn on ozone wayland
+in /etc/mkinitcpio.conf MODULES add nvidia nvidia_modeset nvidia_uvm nvidia_drm and in hooks add systemd and do sudo mkinitcpio -P
+make swap file(size=ram+2) - https://www.youtube.com/watch?v=HSbBl31ohjE
+make a file /etc/modprobe.d/nvidia.conf and type 
+	options nvidia NVreg_PreserveVideoMemoryAllocations=1
+	options nvidia NVreg_TemporaryFilePath=/var/tmp
+in .bashrc add a line - source ~/.config/terminal/bashrc
+for laptop specific https://github.com/johnfanv2/LenovoLegionLinux?tab=readme-ov-file
+set theme (currently using nord)
