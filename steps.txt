@@ -37,7 +37,7 @@ rm -rf yay
 linux-lts-headers kitty linux-header nautilus nvidia-dkms nvidia-utils lib32-nvidia-utils waybar firefox libva-nidia-driver sddm base-devel git vim neovim ttf-cascadia-code-nerd qt5ct qt6ct qt5-wayland pipewire wireplumber qt6-wayland polkit-kde-agent vifm figlet fastfetch htop btop gvfs-mtp brithgnessctl bluez blueman gtk3 gtk4 dunst qt6-svg qt6-declarative rofi-wayland bash-completion telegram-desktop virtualbox virtualbox-host-modules-arch gimp kdenlive imv zathura qbittorrent tp_smapi tlp nm-connection-editor qt5 qt6 vlc mpv
 
 6 - yay packages
-hyprland-git brave-bin visual-studio-code-bin hyprpicker hyprshot hyprpaper wlogout xdg-desktop-portal-hyprland-git webcord slimbookbattery
+hyprland-git brave-bin visual-studio-code-bin hyprpicker hyprshot hyprpaper wlogout xdg-desktop-portal-hyprland-git slimbookbattery
 
 7 - get config
 git clone https://github.com/DarshBhilwara/arch-config
