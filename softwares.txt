@@ -14,9 +14,9 @@ bluetooth - bluez and blueman
 status bar - waybar
 screenshot - hyprshot
 fetch - fastfetch
-music player - vlc and mpv
+music player - spotify-launcher
 photo editor - gimp 
 image viewer - imv
-pdf viewer - zathura
+pdf viewer - evince
 video editor - kdenlive
 torrent client - qbittorrent

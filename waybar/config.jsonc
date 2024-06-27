@@ -74,8 +74,8 @@
         "min-length": 6
     },
     "battery": {
-        "format": "{capacity}%󱊣",
-        "format-charging": "󱊦{capacity}%",
-        "format-plugged": "󱊥{capacity}%"
+        "format": "{capacity}% 󱊣",
+        "format-charging": "{capacity}% 󱊦",
+        "format-plugged": "{capacity}% 󱊥"
     }
 }

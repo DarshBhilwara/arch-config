@@ -8,10 +8,13 @@ alias brt='brightnessctl set'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
-alias grep='/usr/bin/grep e$GREP_OPTIONS'
 alias vim='nvim'
 alias :q='exit'
+alias onlyoffice='onlyoffice-dekstopeditors --ozone-platform=wayland'
 alias :wq='exit'
+alias webcord='webcord --ozone-platform=wayland'
+alias update='sudo pacman -Syyu && yay -Syyu'
+
 unset GREP_OPTIONS
 HISTSIZE=10000
 HISTFILESIZE=10000

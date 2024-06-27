@@ -15,4 +15,4 @@ super shift 0-9 = shift to workspace
 super f = full screen
 super right click move = resize
 super left click move = shift in workspace
-
+super s = spotify

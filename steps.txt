@@ -34,10 +34,10 @@ cd ..
 rm -rf yay
 
 5 - pacman packages
-linux-lts-headers kitty linux-header nautilus nvidia-dkms nvidia-utils lib32-nvidia-utils waybar firefox libva-nidia-driver sddm base-devel git vim neovim ttf-cascadia-code-nerd qt5ct qt6ct qt5-wayland pipewire wireplumber qt6-wayland polkit-kde-agent vifm figlet fastfetch htop btop gvfs-mtp brithgnessctl bluez blueman gtk3 gtk4 dunst qt6-svg qt6-declarative rofi-wayland bash-completion telegram-desktop virtualbox virtualbox-host-modules-arch gimp kdenlive imv zathura qbittorrent tp_smapi tlp nm-connection-editor qt5 qt6 vlc mpv
+linux-lts-headers kitty hyprland linux-header nautilus nvidia-dkms nvidia-utils lib32-nvidia-utils waybar firefox libva-nidia-driver sddm base-devel git vim neovim ttf-cascadia-code-nerd qt5ct qt6ct qt5-wayland pipewire wireplumber qt6-wayland polkit-kde-agent vifm figlet fastfetch htop btop gvfs-mtp brithgnessctl bluez blueman gtk3 gtk4 dunst qt6-svg qt6-declarative rofi-wayland bash-completion telegram-desktop virtualbox virtualbox-host-modules-arch kdenlive imv evince qbittorrent tp_smapi tlp nm-connection-editor qt5 qt6 vlc mpv yt-dlp wine gnome-disk-utility dosfstools ntfsprogs inkscape spotify-launcher plocate man net-tools
 
 6 - yay packages
-hyprland-git brave-bin visual-studio-code-bin hyprpicker hyprshot hyprpaper wlogout xdg-desktop-portal-hyprland-git slimbookbattery
+brave-bin visual-studio-code-bin hyprpicker hyprshot hyprpaper wlogout xdg-desktop-portal-hyprland-git slimbookbattery bottles gimp-devel ani-cli
 
 7 - get config
 git clone https://github.com/DarshBhilwara/arch-config
@@ -64,3 +64,5 @@ make a file /etc/modprobe.d/nvidia.conf and type
 in .bashrc add a line - source ~/.config/terminal/bashrc
 for laptop specific https://github.com/johnfanv2/LenovoLegionLinux?tab=readme-ov-file
 set theme (currently using nord)
+install spicetify
+remove # from extra arguments for wayland line from /etc/spotify-launcher.conf
